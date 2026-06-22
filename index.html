@@ -81,23 +81,22 @@ header.scrolled .burger span{background:var(--sea-deep)}
 .day-note{font-size:.8rem;color:var(--note-c);background:var(--note-bg);border-radius:10px;padding:9px 13px;margin-bottom:14px;border:1px solid #F0DCC2}
 
 .rows{list-style:none}
-.row{display:flex;align-items:flex-start;gap:11px;flex-wrap:nowrap;padding:13px 0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:11px;row-gap:5px;padding:13px 0;border-top:1px solid var(--line);align-items:start}
 .row:first-child{border-top:0}
-.cat-pill{flex-shrink:0;font-size:.66rem;font-weight:700;color:#fff;padding:3px 7px;border-radius:7px;margin-top:3px;letter-spacing:.02em;min-width:42px;text-align:center}
-.s-main{flex:1 1 auto;min-width:0;word-break:break-word}
-.s-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.s-name{font-weight:700;font-size:.96rem;color:var(--ink)}
+.cat-pill{grid-row:1;grid-column:1;font-size:.66rem;font-weight:700;color:#fff;padding:3px 7px;border-radius:7px;margin-top:2px;letter-spacing:.02em;min-width:42px;text-align:center;white-space:nowrap}
+.s-head{grid-row:1;grid-column:2;display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.s-name{font-weight:700;font-size:.96rem;color:var(--ink);word-break:normal;overflow-wrap:break-word}
 .b-time{font-family:"Outfit",sans-serif;font-size:.72rem;font-weight:500;color:var(--sea);background:#E8F4F7;padding:2px 8px;border-radius:6px;white-space:nowrap}
 .badge{font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap}
 .b-ok{color:var(--ok);background:var(--ok-bg)}
 .b-any{color:var(--any);background:var(--any-bg)}
 .b-note{color:var(--note-c);background:var(--note-bg)}
-.s-note{font-size:.8rem;color:var(--mid);margin-top:4px;line-height:1.6}
-.s-links{flex-shrink:0;display:flex;flex-direction:column;gap:5px;align-items:flex-end;padding-top:2px}
-.chip{font-family:"Outfit",sans-serif;font-size:.72rem;font-weight:600;color:var(--sea);border:1px solid #CDE3E9;background:var(--cream);padding:4px 11px;border-radius:7px;white-space:nowrap;transition:.2s;min-width:54px;text-align:center}
+.s-links{grid-row:1;grid-column:3;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+.s-note{grid-row:2;grid-column:2 / 4;font-size:.8rem;color:var(--mid);line-height:1.65;word-break:normal;overflow-wrap:break-word}
+.chip{font-family:"Outfit",sans-serif;font-size:.72rem;font-weight:600;color:var(--sea);border:1px solid #CDE3E9;background:var(--cream);padding:4px 11px;border-radius:7px;white-space:nowrap;transition:.2s;text-align:center}
 .chip:hover{background:var(--sea);color:#fff;border-color:var(--sea)}
 
-.row.move{align-items:center;gap:10px;padding:9px 0;border-top:1px dashed var(--line)}
+.row.move{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px dashed var(--line)}
 .m-line{flex-shrink:0;width:8px;height:8px;border-radius:50%;border:2px solid var(--light)}
 .m-text{font-size:.82rem;color:var(--mid);font-weight:500}
 .m-note{font-family:"Outfit",sans-serif;font-size:.72rem;color:var(--light);margin-left:auto;white-space:nowrap;padding-left:8px}
@@ -188,27 +187,21 @@ footer .copy{font-family:"Outfit",sans-serif;font-size:.64rem;opacity:.55;margin
 <li class="row move"><span class="m-line"></span><span class="m-text">名古屋・砂田橋 出発 ━ 名阪国道で伊賀（壬生野IC）へ</span><span class="m-note">朝発／約1時間半</span></li>
 <li class="row">
   <span class="cat-pill" style="background:#EA6F52">遊ぶ</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">伊賀の里モクモク手づくりファーム</span><span class="b-time">10:00–16:30</span><span class="badge b-ok">土曜 営業</span></div>
-    <div class="s-note">壬生野ICすぐ。ミニブタショー・乳搾り・乗馬、ウインナー手づくり体験、バイキング。昼食もここで</div>
-  </div>
+  <div class="s-head"><span class="s-name">伊賀の里モクモク手づくりファーム</span><span class="b-time">10:00–16:30</span><span class="badge b-ok">土曜 営業</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B3%80%E3%81%AE%E9%87%8C%E3%83%A2%E3%82%AF%E3%83%A2%E3%82%AF%E6%89%8B%E3%81%A5%E3%81%8F%E3%82%8A%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0" target="_blank" rel="noopener">地図</a><a class="chip" href="https://www.moku-moku.com/" target="_blank" rel="noopener">公式</a></div>
+  <div class="s-note">壬生野ICすぐ。ミニブタショー・乳搾り・乗馬、ウインナー手づくり体験、バイキング。昼食もここで</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#EA6F52">遊ぶ</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">名阪アドベンチャーパーク</span><span class="b-time">受付 8:00–17:00</span><span class="badge b-ok">土曜 営業</span></div>
-    <div class="s-note">地上7mのジップライン＆アスレチック。壬生野ICから約1分。未就学児はジャングルボックスでハーネス不要</div>
-  </div>
+  <div class="s-head"><span class="s-name">名阪アドベンチャーパーク</span><span class="b-time">受付 8:00–17:00</span><span class="badge b-ok">土曜 営業</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E5%90%8D%E9%98%AA%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E4%BC%8A%E8%B3%80" target="_blank" rel="noopener">地図</a><a class="chip" href="https://meihan-rgc.co.jp/ap/" target="_blank" rel="noopener">公式</a></div>
+  <div class="s-note">地上7mのジップライン＆アスレチック。壬生野ICから約1分。未就学児はジャングルボックスでハーネス不要</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#0E7C9B">泊・湯</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">島ヶ原温泉やぶっちゃ オートキャンプ場</span><span class="b-time">IN 13:00 / OUT 11:00</span><span class="badge b-note">予約変更</span></div>
-    <div class="s-note">温泉フロント受付・展望露天/サウナ・BBQ。モクモクから車20分。予約済みを7/17→7/18（土）へ変更を（土曜は休前日料金の可能性）</div>
-  </div>
+  <div class="s-head"><span class="s-name">島ヶ原温泉やぶっちゃ オートキャンプ場</span><span class="b-time">IN 13:00 / OUT 11:00</span><span class="badge b-note">予約変更</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E5%B3%B6%E3%83%B6%E5%8E%9F%E6%B8%A9%E6%B3%89%E3%82%84%E3%81%B6%E3%81%A3%E3%81%A1%E3%82%83%20%E3%82%AA%E3%83%BC%E3%83%88%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E5%A0%B4" target="_blank" rel="noopener">地図</a><a class="chip" href="https://www.yabutcha.com/" target="_blank" rel="noopener">公式</a><a class="chip" href="https://select-type.com/rsv/?id=RG388WmzgDw" target="_blank" rel="noopener">予約</a></div>
+  <div class="s-note">温泉フロント受付・展望露天/サウナ・BBQ。モクモクから車20分。予約済みを7/17→7/18（土）へ変更を（土曜は休前日料金の可能性）</div>
 </li>
     </ul>
   </div>
@@ -228,35 +221,27 @@ footer .copy{font-family:"Outfit",sans-serif;font-size:.64rem;opacity:.55;margin
 <li class="row move"><span class="m-line"></span><span class="m-text">やぶっちゃ 朝発 ━ 京奈和道〜阪和道〜紀勢道で白浜へ</span><span class="m-note">約3時間半</span></li>
 <li class="row">
   <span class="cat-pill" style="background:#E0A03C">食</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">とれとれ市場 南紀白浜</span><span class="b-time">8:30–18:30</span><span class="badge b-ok">日曜 営業</span></div>
-    <div class="s-note">西日本最大級の海鮮マーケットで昼食。南紀白浜ICすぐ・通り道</div>
-  </div>
+  <div class="s-head"><span class="s-name">とれとれ市場 南紀白浜</span><span class="b-time">8:30–18:30</span><span class="badge b-ok">日曜 営業</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%8C%E3%81%A8%E3%82%8C%E5%B8%82%E5%A0%B4%20%E5%8D%97%E7%B4%80%E7%99%BD%E6%B5%9C" target="_blank" rel="noopener">地図</a><a class="chip" href="https://toretore.com/ichiba/" target="_blank" rel="noopener">公式</a></div>
+  <div class="s-note">西日本最大級の海鮮マーケットで昼食。南紀白浜ICすぐ・通り道</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#3DB0C9">海・景</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">白良浜 海水浴</span><span class="b-time">24時間</span><span class="badge b-any">いつでも</span></div>
-    <div class="s-note">真っ白な砂浜。午後にひと泳ぎ（グランパスから車5分）</div>
-  </div>
+  <div class="s-head"><span class="s-name">白良浜 海水浴</span><span class="b-time">24時間</span><span class="badge b-any">いつでも</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E7%99%BD%E8%89%AF%E6%B5%9C%E6%B5%B7%E6%B0%B4%E6%B5%B4%E5%A0%B4" target="_blank" rel="noopener">地図</a></div>
+  <div class="s-note">真っ白な砂浜。午後にひと泳ぎ（グランパスから車5分）</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#0E7C9B">泊・湯</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">グランパスinn白浜 オートキャンプ場（設営）</span><span class="b-time">IN 14:00 / OUT 12:00</span><span class="badge b-note">予約変更</span></div>
-    <div class="s-note">海を見下ろす高台・場内温泉・夏は温泉プール。予約済みを7/18-20→7/19-21（2泊）へ変更を（海の日連休で特別料金の可能性）</div>
-  </div>
+  <div class="s-head"><span class="s-name">グランパスinn白浜 オートキャンプ場（設営）</span><span class="b-time">IN 14:00 / OUT 12:00</span><span class="badge b-note">予約変更</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%91%E3%82%B9inn%E7%99%BD%E6%B5%9C%20%E3%82%AA%E3%83%BC%E3%83%88%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E5%A0%B4" target="_blank" rel="noopener">地図</a><a class="chip" href="https://www.nap-camp.com/wakayama/13428" target="_blank" rel="noopener">予約</a></div>
+  <div class="s-note">海を見下ろす高台・場内温泉・夏は温泉プール。予約済みを7/18-20→7/19-21（2泊）へ変更を（海の日連休で特別料金の可能性）</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#3DB0C9">海・景</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">円月島（高嶋）</span><span class="b-time">24時間</span><span class="badge b-any">いつでも</span></div>
-    <div class="s-note">中央に丸い穴があく夕日の名所。夕方に</div>
-  </div>
+  <div class="s-head"><span class="s-name">円月島（高嶋）</span><span class="b-time">24時間</span><span class="badge b-any">いつでも</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E5%86%86%E6%9C%88%E5%B3%B6%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a></div>
+  <div class="s-note">中央に丸い穴があく夕日の名所。夕方に</div>
 </li>
     </ul>
   </div>
@@ -275,35 +260,27 @@ footer .copy{font-family:"Outfit",sans-serif;font-size:.64rem;opacity:.55;margin
     <ul class="rows">
 <li class="row">
   <span class="cat-pill" style="background:#EA6F52">遊ぶ</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">アドベンチャーワールド</span><span class="b-time">10:00–17:00</span><span class="badge b-ok">月曜 営業</span></div>
-    <div class="s-note">イルカショー/サファリ/動物ショー/乗り物。水曜定休（祝日は営業）。朝イチ入場推奨</div>
-  </div>
+  <div class="s-head"><span class="s-name">アドベンチャーワールド</span><span class="b-time">10:00–17:00</span><span class="badge b-ok">月曜 営業</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a><a class="chip" href="https://www.aws-s.com/" target="_blank" rel="noopener">公式</a></div>
+  <div class="s-note">イルカショー/サファリ/動物ショー/乗り物。水曜定休（祝日は営業）。朝イチ入場推奨</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#3DB0C9">海・景</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">三段壁洞窟</span><span class="b-time">8:00–17:00</span><span class="badge b-ok">営業</span></div>
-    <div class="s-note">断崖の地下に広がる洞窟。グランパスから車3分。夕方に</div>
-  </div>
+  <div class="s-head"><span class="s-name">三段壁洞窟</span><span class="b-time">8:00–17:00</span><span class="badge b-ok">営業</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E6%AE%B5%E5%A3%81%E6%B4%9E%E7%AA%9F%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a></div>
+  <div class="s-note">断崖の地下に広がる洞窟。グランパスから車3分。夕方に</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#3DB0C9">海・景</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">千畳敷</span><span class="b-time">24時間</span><span class="badge b-any">いつでも</span></div>
-    <div class="s-note">波が削った大岩の景勝地。グランパスから徒歩5分</div>
-  </div>
+  <div class="s-head"><span class="s-name">千畳敷</span><span class="b-time">24時間</span><span class="badge b-any">いつでも</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E7%95%B3%E6%95%B7%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a></div>
+  <div class="s-note">波が削った大岩の景勝地。グランパスから徒歩5分</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#0E7C9B">泊・湯</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">グランパスへ戻って 場内温泉 ＋ BBQ</span><span class="b-time">温泉あり</span><span class="badge b-any">いつでも</span></div>
-    <div class="s-note">露天風呂から夕日。夏は温泉プールも</div>
-  </div>
+  <div class="s-head"><span class="s-name">グランパスへ戻って 場内温泉 ＋ BBQ</span><span class="b-time">温泉あり</span><span class="badge b-any">いつでも</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E7%95%B3%E3%81%AE%E6%B9%AF%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%91%E3%82%B9" target="_blank" rel="noopener">地図</a></div>
+  <div class="s-note">露天風呂から夕日。夏は温泉プールも</div>
 </li>
     </ul>
   </div>
@@ -322,19 +299,15 @@ footer .copy{font-family:"Outfit",sans-serif;font-size:.64rem;opacity:.55;margin
     <ul class="rows">
 <li class="row">
   <span class="cat-pill" style="background:#7E9B6B">学ぶ</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">京都大学白浜水族館</span><span class="b-time">9:00–17:00</span><span class="badge b-ok">火曜 営業</span></div>
-    <div class="s-note">無脊椎動物の展示は日本随一・約500種・500円。円月島すぐ。午前に</div>
-  </div>
+  <div class="s-head"><span class="s-name">京都大学白浜水族館</span><span class="b-time">9:00–17:00</span><span class="badge b-ok">火曜 営業</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%A4%A7%E5%AD%A6%E7%99%BD%E6%B5%9C%E6%B0%B4%E6%97%8F%E9%A4%A8" target="_blank" rel="noopener">地図</a><a class="chip" href="https://www.seto.kyoto-u.ac.jp/shirahama_aqua/" target="_blank" rel="noopener">公式</a></div>
+  <div class="s-note">無脊椎動物の展示は日本随一・約500種・500円。円月島すぐ。午前に</div>
 </li>
 <li class="row">
   <span class="cat-pill" style="background:#7E9B6B">学ぶ</span>
-  <div class="s-main">
-    <div class="s-head"><span class="s-name">南方熊楠記念館</span><span class="b-time">9:00–17:00（入館16:30）</span><span class="badge b-ok">火曜 営業</span></div>
-    <div class="s-note">水族館の隣・余裕があれば。屋上展望台から円月島。木曜定休だが夏休みは無休</div>
-  </div>
+  <div class="s-head"><span class="s-name">南方熊楠記念館</span><span class="b-time">9:00–17:00（入館16:30）</span><span class="badge b-ok">火曜 営業</span></div>
   <div class="s-links"><a class="chip" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E6%96%B9%E7%86%8A%E6%A5%A0%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a><a class="chip" href="https://www.minakatakumagusu-kinenkan.jp/" target="_blank" rel="noopener">公式</a></div>
+  <div class="s-note">水族館の隣・余裕があれば。屋上展望台から円月島。木曜定休だが夏休みは無休</div>
 </li>
 <li class="row move"><span class="m-line"></span><span class="m-text">グランパス 撤収（12:00）━ 紀勢道〜名阪国道で名古屋へ</span><span class="m-note">約4時間半</span></li>
     </ul>
