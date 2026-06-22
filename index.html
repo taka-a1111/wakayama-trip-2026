@@ -53,7 +53,7 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
 .hero-stats div{flex:1;text-align:center;border-right:1px solid rgba(255,255,255,.28)}
 .hero-stats div:last-child{border-right:none}
 .hero-stats .num{font-family:'Outfit';font-weight:700;font-size:1.7rem;color:#fff;line-height:1}
-.hero-stats .lbl{font-size:.66rem;letter-spacing:.18em;color:rgba(255,255,255,.85);font-family:'Outfit';font-weight:600;margin-top:5px}
+.hero-stats .lbl{font-size:.68rem;letter-spacing:.06em;color:rgba(255,255,255,.85);font-family:'Zen Kaku Gothic New';font-weight:500;margin-top:5px}
 
 .legend-wrap{max-width:980px;margin:0 auto;padding:26px 18px 4px}
 .legend{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:13px 18px;box-shadow:var(--shadow-s)}
@@ -151,9 +151,9 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
 <body>
 <nav class="nav">
   <div class="nav-in">
-    <div class="brand">白浜・伊賀キャンプ<small class="en">WAKAYAMA 2026</small></div>
+    <div class="brand">白浜・伊賀キャンプ<small class="en">和歌山 2026</small></div>
     <button class="burger" onclick="document.getElementById('navd').classList.toggle('open')">日程 ▾</button>
-    <div class="nav-days" id="navd"><a href="#day1">DAY1<small>7/18</small></a><a href="#day2">DAY2<small>7/19</small></a><a href="#day3">DAY3<small>7/20</small></a><a href="#day4">DAY4<small>7/21</small></a></div>
+    <div class="nav-days" id="navd"><a href="#day1">1日目<small>7/18</small></a><a href="#day2">2日目<small>7/19</small></a><a href="#day3">3日目<small>7/20</small></a><a href="#day4">4日目<small>7/21</small></a></div>
   </div>
 </nav>
 
@@ -163,9 +163,9 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
       <h1><span class="nb">白浜・伊賀 3泊4日</span><br>家族キャンプ旅</h1>
       <div class="dates"><b class="en">2026.7.18 – 7.21</b><span class="pax">大人2・子ども2</span></div>
       <div class="hero-stats">
-        <div><div class="num">4</div><div class="lbl">DAYS</div></div>
-        <div><div class="num">3</div><div class="lbl">NIGHTS</div></div>
-        <div><div class="num">13</div><div class="lbl">SPOTS</div></div>
+        <div><div class="num">4</div><div class="lbl">日間</div></div>
+        <div><div class="num">3</div><div class="lbl">泊</div></div>
+        <div><div class="num">13</div><div class="lbl">スポット</div></div>
       </div>
     </div>
   </div>
@@ -173,7 +173,7 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
 
 <div class="legend-wrap reveal">
   <div class="legend">
-    <span class="lg-title">CATEGORY</span><span class="lg"><span class="dot" style="background:var(--teal-ink)"></span>泊・湯</span><span class="lg"><span class="dot" style="background:var(--teal)"></span>海・景</span><span class="lg"><span class="dot" style="background:var(--coral)"></span>遊ぶ</span><span class="lg"><span class="dot" style="background:var(--gold)"></span>食</span><span class="lg"><span class="dot" style="background:var(--slate)"></span>学ぶ</span><span class="lg"><span class="dot" style="background:#aab4b7"></span>移動</span>
+    <span class="lg-title">カテゴリ</span><span class="lg"><span class="dot" style="background:var(--teal-ink)"></span>泊・湯</span><span class="lg"><span class="dot" style="background:var(--teal)"></span>海・景</span><span class="lg"><span class="dot" style="background:var(--coral)"></span>遊ぶ</span><span class="lg"><span class="dot" style="background:var(--gold)"></span>食</span><span class="lg"><span class="dot" style="background:var(--slate)"></span>学ぶ</span><span class="lg"><span class="dot" style="background:#aab4b7"></span>移動</span>
   </div>
 </div>
 
@@ -181,7 +181,7 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
 <section class="day reveal" id="day1">
       <div class="day-line">
         <div class="day-date"><span class="dd">7/18</span><span class="dw">土</span></div>
-        <span class="day-badge">DAY 1</span>
+        <span class="day-badge">1日目</span>
         <div class="day-tags"><span class="day-tag t-carstart">伊賀エリア</span></div>
       </div>
       <h2 class="day-theme big">名古屋 〜 伊賀（遊んで泊まる）</h2>
@@ -190,13 +190,13 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
         <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-move">移動</span><span class="s-name">名古屋・砂田橋 出発 ━ 名阪国道で伊賀（壬生野IC）へ</span><span class="s-time">朝発／約1時間半</span></div></div></li>
         <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-play">遊ぶ</span><span class="s-name">伊賀の里モクモク手づくりファーム</span><span class="s-time">10:00–16:30</span><span class="bdg b-open">土曜 営業</span></div><div class="s-note">壬生野ICすぐ。ミニブタショー・乳搾り・乗馬、ウインナー手づくり体験、バイキング。昼食もここで</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%B3%80%E3%81%AE%E9%87%8C%E3%83%A2%E3%82%AF%E3%83%A2%E3%82%AF%E6%89%8B%E3%81%A5%E3%81%8F%E3%82%8A%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0" target="_blank" rel="noopener">地図</a><a class="lnk lnk-of" href="https://www.moku-moku.com/" target="_blank" rel="noopener">公式</a></div></li>
         <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-play">遊ぶ</span><span class="s-name">名阪アドベンチャーパーク</span><span class="s-time">受付 8:00–17:00</span><span class="bdg b-open">土曜 営業</span></div><div class="s-note">地上7mのジップライン＆アスレチック。壬生野ICから約1分。未就学児はジャングルボックスでハーネス不要</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E5%90%8D%E9%98%AA%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E4%BC%8A%E8%B3%80" target="_blank" rel="noopener">地図</a><a class="lnk lnk-of" href="https://meihan-rgc.co.jp/ap/" target="_blank" rel="noopener">公式</a></div></li>
-        <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-stay">泊・湯</span><span class="s-name">島ヶ原温泉やぶっちゃ オートキャンプ場</span><span class="s-time">IN 13:00 / OUT 11:00</span><span class="bdg b-note">予約変更</span></div><div class="s-note">温泉フロント受付・展望露天/サウナ・BBQ。モクモクから車20分。予約済みを7/17→7/18（土）へ変更を（土曜は休前日料金の可能性）</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E5%B3%B6%E3%83%B6%E5%8E%9F%E6%B8%A9%E6%B3%89%E3%82%84%E3%81%B6%E3%81%A3%E3%81%A1%E3%82%83%20%E3%82%AA%E3%83%BC%E3%83%88%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E5%A0%B4" target="_blank" rel="noopener">地図</a><a class="lnk lnk-of" href="https://www.yabutcha.com/" target="_blank" rel="noopener">公式</a><a class="lnk lnk-bk" href="https://select-type.com/rsv/?id=RG388WmzgDw" target="_blank" rel="noopener">予約</a></div></li>
+        <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-stay">泊・湯</span><span class="s-name">島ヶ原温泉やぶっちゃ オートキャンプ場</span><span class="s-time">IN 13:00 / OUT 11:00</span><span class="bdg b-note">予約変更</span></div><div class="s-note">温泉フロント受付・展望露天/サウナ・バーベキュー。モクモクから車20分。予約済みを7/17→7/18（土）へ変更を（土曜は休前日料金の可能性）</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E5%B3%B6%E3%83%B6%E5%8E%9F%E6%B8%A9%E6%B3%89%E3%82%84%E3%81%B6%E3%81%A3%E3%81%A1%E3%82%83%20%E3%82%AA%E3%83%BC%E3%83%88%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E5%A0%B4" target="_blank" rel="noopener">地図</a><a class="lnk lnk-of" href="https://www.yabutcha.com/" target="_blank" rel="noopener">公式</a><a class="lnk lnk-bk" href="https://select-type.com/rsv/?id=RG388WmzgDw" target="_blank" rel="noopener">予約</a></div></li>
       </ul>
     </section>
 <section class="day reveal" id="day2">
       <div class="day-line">
         <div class="day-date"><span class="dd">7/19</span><span class="dw">日</span></div>
-        <span class="day-badge">DAY 2</span>
+        <span class="day-badge">2日目</span>
         <div class="day-tags"><span class="day-tag t-far">長距離移動</span></div>
       </div>
       <h2 class="day-theme big">やぶっちゃ 〜 白浜</h2>
@@ -212,7 +212,7 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
 <section class="day reveal" id="day3">
       <div class="day-line">
         <div class="day-date"><span class="dd">7/20</span><span class="dw">月</span></div>
-        <span class="day-badge">DAY 3</span>
+        <span class="day-badge">3日目</span>
         <div class="day-tags"><span class="day-tag t-near">海の日</span></div>
       </div>
       <h2 class="day-theme big">アドベンチャーワールド 1日</h2>
@@ -221,13 +221,13 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
         <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-play">遊ぶ</span><span class="s-name">アドベンチャーワールド</span><span class="s-time">10:00–17:00</span><span class="bdg b-open">月曜 営業</span></div><div class="s-note">イルカショー/サファリ/動物ショー/乗り物。水曜定休（祝日は営業）。朝イチ入場推奨</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a><a class="lnk lnk-of" href="https://www.aws-s.com/" target="_blank" rel="noopener">公式</a></div></li>
         <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-sea">海・景</span><span class="s-name">三段壁洞窟</span><span class="s-time">8:00–17:00</span><span class="bdg b-open">営業</span></div><div class="s-note">断崖の地下に広がる洞窟。グランパスから車3分。夕方に</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E6%AE%B5%E5%A3%81%E6%B4%9E%E7%AA%9F%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a></div></li>
         <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-sea">海・景</span><span class="s-name">千畳敷</span><span class="s-time">24時間</span><span class="bdg b-always">いつでも</span></div><div class="s-note">波が削った大岩の景勝地。グランパスから徒歩5分</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E7%95%B3%E6%95%B7%20%E7%99%BD%E6%B5%9C%E7%94%BA" target="_blank" rel="noopener">地図</a></div></li>
-        <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-stay">泊・湯</span><span class="s-name">グランパスへ戻って 場内温泉 ＋ BBQ</span><span class="s-time">温泉あり</span><span class="bdg b-always">いつでも</span></div><div class="s-note">露天風呂から夕日。夏は温泉プールも</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E7%95%B3%E3%81%AE%E6%B9%AF%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%91%E3%82%B9" target="_blank" rel="noopener">地図</a></div></li>
+        <li class="spot-row"><div class="spot-main"><div class="spot-meta"><span class="ctag cat-stay">泊・湯</span><span class="s-name">グランパスへ戻って 場内温泉 ＋ バーベキュー</span><span class="s-time">温泉あり</span><span class="bdg b-always">いつでも</span></div><div class="s-note">露天風呂から夕日。夏は温泉プールも</div></div><div class="spot-links"><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E7%95%B3%E3%81%AE%E6%B9%AF%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%91%E3%82%B9" target="_blank" rel="noopener">地図</a></div></li>
       </ul>
     </section>
 <section class="day reveal" id="day4">
       <div class="day-line">
         <div class="day-date"><span class="dd">7/21</span><span class="dw">火</span></div>
-        <span class="day-badge">DAY 4</span>
+        <span class="day-badge">4日目</span>
         <div class="day-tags"><span class="day-tag t-dep">帰路</span></div>
       </div>
       <h2 class="day-theme big">白浜（番所崎）〜 帰名</h2>
@@ -242,7 +242,7 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:va
 
 <footer class="foot">
   <div class="ft-title">よい旅を</div>
-  <div class="ft-meta en">ITINERARY 2026.07.18 – 07.21 ・ WAKAYAMA / IGA</div>
+  <div class="ft-meta">旅程 2026.7.18 – 7.21 ・ 和歌山／伊賀</div>
   <div class="ft-links">
     <a href="https://select-type.com/rsv/?id=RG388WmzgDw" target="_blank" rel="noopener">やぶっちゃ 予約変更</a>
     <a href="https://www.nap-camp.com/wakayama/13428" target="_blank" rel="noopener">グランパス 予約変更</a>
